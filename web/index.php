@@ -1,4 +1,7 @@
+<?php
 
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,28 +9,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SERWIS OGŁOSZENIOWY APLIKACJA WEBOWA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- HEADER - nagłówek stony -->
-    <header>
-        <!-- nawigacaj w nagłóku -->
-        <nav class="menuNawigacyjne grid-container"></nav>
-        <!-- Zdięcie z logo -->
-        <img src="logo.png" alt="SOAW portal ogłoszeniowy" id="logoImg" class="item1">
-
-        
-        <!-- Lista  -->
-            <ul class="ulNawigacyjne item2">
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#link1">Link 1</a></li>
-                <li><a href="#link2">Link 2</a></li>
-                <li><a href="#link3">Link 3</a></li>
-                <li><a href="#link4">Link 4</a></li>
-            </ul>
-        </nav>
-    </header>
+        <?php include_once "headerUser.php" ?>
     <!-- COntent Zawartość strony -->
     <div id="contentMain" class="contentMain">
         <article>
@@ -65,10 +52,6 @@
     <!-- content zawartość strony END -->
 
     <!-- FOOTER stopka strony -->
-    <footer>
-        <h3>
-            To jest stopka, umieścimy tutaj informacje o firmie oraz likowanie do plików (np. informacje o budowanym projekcie i jego twórcach).
-        </h3>
-    </footer>
+    <?php include_once "footerUser.php" ?>
 </body>
 </html>

@@ -1,0 +1,19 @@
+create schema if not EXISTS `soaw`
+DEFAULT CHARACTER SET utf8mb4 COLLATE
+utf8mb4_unicode_ci;
+USE `soaw`;
+
+CREATE TABLE IF NOT EXISTS `soaw`.`user` (
+    `id_user` INT NOT NULL AUTO_INCREMENT COMMENT 'Klucz gółwny nadany automatycznie',
+    `emial` VARCHAR(30) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT Null COMMENT 'Adres email- nazwa użytkownika potrzebna do logowania.',
+    `haslo` VARCHAR(256) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT Null COMMENT 'Niezaszyfrowane hasło',
+    `imie` VARCHAR(20) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT Null COMMENT 'mie użytkownika',
+    `nazwisko` VARCHAR(30) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT Null COMMENT 'Nazwisko użytkownika',
+    `telefon` VARCHAR(12) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci' NOT Null COMMENT 'Telefon użytkownika 9-io cyfrowy',
+    PRIMARY KEY (`id_user`),
+    UNIQUE(`emial`))
+ENGINE = INNODB
+COMMENT = 'Posiada informacje o userach zarejestrowanych w programie.';
+
+
+INSERT INTO `user`(`id_user`, `emial`, `haslo`, `imie`, `nazwisko`, `telefon`) VALUES (null,'abc@abc1.pl','12345qwert','Jarek','Lubokotny','509000000'),(null,'abc@abc2.pl','12345qwert','Andrew','Dudilsky','111111111');
