@@ -1,0 +1,65 @@
+html,body,div,span,a,article,aside,canvas,figure,figcaption,footer,header,nav,audio,video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+header{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #017800;
+    position: sticky;
+    top: 0;
+}
+
+header ul{
+    list-style-type: none;
+}
+
+header ul li{
+    float: left;
+}
+
+header ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header ul li a:hover{
+   border: 0.1em solid #111;
+   border-radius:1em;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.grid-container>div{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+@media  screen and (max-width:768px) {
+
+    .grid-container{
+    display: grid;
+    grid-template-columns: auto ;
+    min-width: 100%;
+    grid-gap: 10px;
+    padding: 2px;
+}
+.grid-container>div{
+    text-align: center;
+    padding: 2px 0;
+    font-size: 20px;
+}
+}
