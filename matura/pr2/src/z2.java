@@ -40,10 +40,6 @@ public class z2 {
                 for (int i =2;i<tablica.length;i++){
                     if (tablica[i] != 0) {
                         if(w%tablica[i]==0){
-                            System.out.print(w);
-                            System.out.print(" ");
-                            System.out.print(i);
-                            System.out.println(" ");
                             iloscczynnikow++;
                             if(!t.contains(i))
                                 t.add(tablica[i]);
